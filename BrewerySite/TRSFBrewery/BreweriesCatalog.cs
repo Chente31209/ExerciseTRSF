@@ -1,33 +1,50 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
 
 namespace TRSFBrewery
 {
-    public class BreweriesCatalog :Loader
+    public class BreweriesCatalog : Loader
     {
-        
-        public List<Brewery> getListBreweries()
+        /// <summary>
+        /// Transforma una la lineas en objetos 
+        /// </summary>
+        private Brewery Parse(String Item)
         {
-            List<Brewery> listBreweies=new List<Brewery>{};
-            
-            return listBreweies;
-            
-            
+            Brewery brewery = new Brewery();
+            if (Item != "")
+            {
+                var item = Item.Split(',');
+                if (item.Length >= 12)
+                {
+                    brewery.Name = item[1];
+                    brewery.Address = item[2];
+                    brewery.City = item[4];
+                    brewery.State = item[5];
+                    brewery.ZipCode = item[6];
+                    brewery.Country = item[7];
+                    brewery.Phone = item[8];
+                    brewery.WebSitie = item[9];
+                    brewery.Decription = item[11];
+                }
+            }
+
+            return brewery;
         }
-        public  void Prase()
+        /// <summary>
+        /// Crea la lista del Breweries
+        /// </summary>
+        /// <param name="phatOfBreweries"></param>
+        /// <returns></returns>
+        public List<Brewery> getListBreweries(String phatOfBreweries)
         {
-            String phat = @"D:\User\Vicente\Proyectos\Cursos de Programacion\Curso de C#\Repocitorio\ExerciseTRSF\BrewerySite\Files\breweries.csv";
-            
-            String[] rowBre_=load(phat);
+            List<Brewery> listBreweies = new List<Brewery> { };
+            String[] rowBre_ = load(phatOfBreweries);
             foreach (var item in rowBre_)
             {
-                var fields =item.Split(',');
-                if (fields.Length>=12)
-                    getListBreweries().Add(new Brewery(){Name=fields[1],Address=fields[2],City=fields[4],State=fields[5],ZipCode=fields[6],Country=fields[7],Phone=fields[8],WebSitie=fields[9],Decription=fields[11]});
+                listBreweies.Add(Parse(item));
             }
-        }
 
-        
+            return listBreweies;
+        }
     }
 }

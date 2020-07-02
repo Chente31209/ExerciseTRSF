@@ -5,52 +5,39 @@ namespace TRSFBrewery
 {
     public class StyleCatalog : Loader
     {
-        
+
         /// <summary>
         /// Transforma una la lineas en objetos 
         /// </summary>
-        public Style Parse(String[] Item)
+        private Style Parse(String Item)
         {
-            Style style=new Style();
-            
-                if (Item.Length >= 3)
+            Style style = new Style();
+            if (Item != "")
+            {
+                var fields = Item.Split(',');
+                if (fields.Length >= 3)
                 {
-                     
-                    style.Id=/*int.Parse(Item[0]);*/Item[0];
-                    style.NameStyle=Item[3];
+                    style.Id =/*int.Parse(Item[0]);*/fields[0];
+                    style.NameStyle = fields[3];
                 }
-                     
-
-
-
+            }
             return style;
-
         }
 
         /// <summary>
         /// llena la lista de estilos con los datos del archivo estilo 
         /// </summary>   
-        public List<Style> getListStyles()
+        public List<Style> getListStyles(String phatofstyles)
         {
             List<Style> Styles = new List<Style> { };
-            String phat = @"D:\User\Vicente\Proyectos\Cursos de Programacion\Curso de C#\Repocitorio\ExerciseTRSF\BrewerySite\Files\styles.csv";
-
-            String[] rowsStyles = load(phat);
+            String[] rowsStyles = load(phatofstyles);
             foreach (var item in rowsStyles)
             {
-                var fields = item.Split(',');
-                var Style = Parse(fields);
-                Styles.Add(Style);
+                Styles.Add(Parse(item));
             }
 
             return Styles;
 
-
         }
-
-
-
-
-
     }
 }

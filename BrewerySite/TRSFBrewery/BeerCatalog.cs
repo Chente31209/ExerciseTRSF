@@ -1,39 +1,55 @@
-using static System.Console;
+using System;
 using System.Collections.Generic;
-using System.IO;
 
 
 namespace TRSFBrewery
 {
-    public class BeerCatalog:Loader
+    public class BeerCatalog : Loader
     {
+        
 
-        public List<Beer>  SetListBeer()
+        /// <summary>
+        /// Transforma una la lineas en objetos 
+        /// </summary>
+        private Beer Parse(String[] Item)
         {
-            List<Beer> beers1 = new List<Beer> { };
+            Beer beer = new Beer();
+
             
-            return beers1;
+
+            if (Item.Length >= 10 )
+            {
+                beer.Category = "null";
+                beer.StyleName = Item[2];
+                beer.Description = Item[9];
+                beer.GlassType = "null";
+                beer.Country = "null"; 
+                beer.abv = Item[5];
+                beer.ibu = Item[6];
+                beer.srm = Item[7];
+                beer.upc = Item[8];
+            }
+            return beer;
         }
+        /// <summary>
+        /// crea cuna lista Beer
+        /// </summary>
+        /// <param name="phatOfBre"></param>
+        /// <returns></returns>
 
-        public  void Prase()
+        public List<Beer> SetListBeer(String phatOfBre)
         {
-            
-            string nameFile = @"D:\User\Vicente\Proyectos\Cursos de Programacion\Curso de C#\Repocitorio\ExerciseTRSF\BrewerySite\Files\beers-cleaned.csv";
-            var beer = load(nameFile);
-
+            List<Beer> beers = new List<Beer> { };
+            var beer = load(phatOfBre);
             foreach (var item in beer)
             {
-                var fields = item.Split(',');
-                if (fields.Length >= 10)
-                    SetListBeer().Add(new Beer() { Category ="null", StyleName = fields[2], 
-                    Description = fields[9], GlassType = "null", Country = "null", 
-                    abv=fields[5],ibu=fields[6],srm=fields[7],upc=fields[8] });
-                
+                var Item = item.Split(',');
+
+                beers.Add(Parse(Item));
+
             }
+            return beers;
         }
-
-
-
     }
 
 }
