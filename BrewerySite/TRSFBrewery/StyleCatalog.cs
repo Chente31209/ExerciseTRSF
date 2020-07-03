@@ -11,17 +11,27 @@ namespace TRSFBrewery
         /// </summary>
         private Style Parse(String Item)
         {
+            try
+            {
             Style style = new Style();
-            if (Item != "")
+            if (!string.IsNullOrEmpty(Item) && !string.IsNullOrWhiteSpace(Item))
             {
                 var fields = Item.Split(',');
                 if (fields.Length >= 3)
                 {
                     style.Id =/*int.Parse(Item[0]);*/fields[0];
                     style.NameStyle = fields[3];
-                }
+                } 
+                return style;
             }
-            return style;
+            else 
+                return null;
+           
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -33,7 +43,9 @@ namespace TRSFBrewery
             String[] rowsStyles = load(phatofstyles);
             foreach (var item in rowsStyles)
             {
-                Styles.Add(Parse(item));
+                var linetrue=Parse(item);
+                if (linetrue!=null)
+                    Styles.Add(linetrue);
             }
 
             return Styles;

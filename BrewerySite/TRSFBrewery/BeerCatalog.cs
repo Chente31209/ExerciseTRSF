@@ -6,7 +6,7 @@ namespace TRSFBrewery
 {
     public class BeerCatalog : Loader
     {
-        
+
 
         /// <summary>
         /// Transforma una la lineas en objetos 
@@ -15,21 +15,28 @@ namespace TRSFBrewery
         {
             Beer beer = new Beer();
 
-            
-
-            if (Item.Length >= 10 )
+            try
             {
-                beer.Category = "null";
-                beer.StyleName = Item[2];
-                beer.Description = Item[9];
-                beer.GlassType = "null";
-                beer.Country = "null"; 
-                beer.abv = Item[5];
-                beer.ibu = Item[6];
-                beer.srm = Item[7];
-                beer.upc = Item[8];
+                if (Item.Length >= 10)
+                {
+                    beer.Category = "null";
+                    beer.StyleName = Item[2];
+                    beer.Description = Item[9];
+                    beer.GlassType = "null";
+                    beer.Country = "null";
+                    beer.abv = Item[5];
+                    beer.ibu = Item[6];
+                    beer.srm = Item[7];
+                    beer.upc = Item[8];
+                }
+                return beer;
             }
-            return beer;
+            catch(Exception e)
+            {
+                return null;
+            }
+
+
         }
         /// <summary>
         /// crea cuna lista Beer
