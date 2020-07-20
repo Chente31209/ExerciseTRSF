@@ -23,7 +23,7 @@ namespace TRSFBrewerConsole
                 Console.WriteLine(item.Id);
             }
             WriteLine("R-----------");
-*/
+*//*
             var d = breweriesCatalog.getListBreweries(breweriescsv);
             foreach (var item in d)
             {
@@ -31,13 +31,13 @@ namespace TRSFBrewerConsole
             }
             WriteLine("R-----------");
             
-            /*
+            */
             var f = beerCatalog.SetListBeer(beerscleanedcsv);
             foreach (var item in f)
             {
                 Console.WriteLine(item.abv);
             }
-            WriteLine("R-----------");*/
+            WriteLine("R-----------");
 
 
 

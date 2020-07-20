@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TRSFBrewery
 {
@@ -34,7 +35,7 @@ namespace TRSFBrewery
                     return null;
                 
             }
-            catch(Exception e)
+            catch
             {
                 return null;
             }
@@ -52,7 +53,7 @@ namespace TRSFBrewery
         {
             List<Brewery> listBreweies = new List<Brewery> { };
             String[] rowBre_ = load(phatOfBreweries);
-            foreach (var item in rowBre_)
+            foreach (var item in rowBre_.Skip(1))
             {
                 var linetrue = Parse(item);
                 if (linetrue != null)
