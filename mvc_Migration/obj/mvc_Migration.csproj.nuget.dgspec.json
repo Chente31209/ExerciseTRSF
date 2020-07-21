@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\User\\Vicente\\Proyectos\\Cursos de Programacion\\Curso de C#\\Repocitorio\\Eperimetos\\mvc_Migration\\mvc_Migration.csproj": {}
+    "D:\\User\\Vicente\\Proyectos\\Cursos de Programacion\\Curso de C#\\Repocitorio\\ExerciseTRSF\\mvc_Migration\\mvc_Migration.csproj": {}
   },
   "projects": {
-    "D:\\User\\Vicente\\Proyectos\\Cursos de Programacion\\Curso de C#\\Repocitorio\\Eperimetos\\mvc_Migration\\mvc_Migration.csproj": {
+    "D:\\User\\Vicente\\Proyectos\\Cursos de Programacion\\Curso de C#\\Repocitorio\\ExerciseTRSF\\mvc_Migration\\mvc_Migration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\User\\Vicente\\Proyectos\\Cursos de Programacion\\Curso de C#\\Repocitorio\\Eperimetos\\mvc_Migration\\mvc_Migration.csproj",
+        "projectUniqueName": "D:\\User\\Vicente\\Proyectos\\Cursos de Programacion\\Curso de C#\\Repocitorio\\ExerciseTRSF\\mvc_Migration\\mvc_Migration.csproj",
         "projectName": "mvc_Migration",
-        "projectPath": "D:\\User\\Vicente\\Proyectos\\Cursos de Programacion\\Curso de C#\\Repocitorio\\Eperimetos\\mvc_Migration\\mvc_Migration.csproj",
+        "projectPath": "D:\\User\\Vicente\\Proyectos\\Cursos de Programacion\\Curso de C#\\Repocitorio\\ExerciseTRSF\\mvc_Migration\\mvc_Migration.csproj",
         "packagesPath": "C:\\Users\\chent\\.nuget\\packages\\",
-        "outputPath": "D:\\User\\Vicente\\Proyectos\\Cursos de Programacion\\Curso de C#\\Repocitorio\\Eperimetos\\mvc_Migration\\obj\\",
+        "outputPath": "D:\\User\\Vicente\\Proyectos\\Cursos de Programacion\\Curso de C#\\Repocitorio\\ExerciseTRSF\\mvc_Migration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\chent\\AppData\\Roaming\\NuGet\\NuGet.Config"

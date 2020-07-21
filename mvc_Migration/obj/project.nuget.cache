@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oa6X2ZfD/x8jbbofby2mKjX9CZZ+sko6aj5MBGgDdmDAOlhIPcM2vdO0iVOD4SSFIYqjbCq3BgcMEGT+SRBZ9Q==",
+  "dgSpecHash": "7zFuQ7hXNuHSaFIsvg6FLKCowo5uD1VZGc5XE6ra1GjTQiI0WdM9VnrapN4h93OOh8YFb8N0m3SunBGqKfa1Ew==",
   "success": true,
-  "projectFilePath": "D:\\User\\Vicente\\Proyectos\\Cursos de Programacion\\Curso de C#\\Repocitorio\\Eperimetos\\mvc_Migration\\mvc_Migration.csproj",
+  "projectFilePath": "D:\\User\\Vicente\\Proyectos\\Cursos de Programacion\\Curso de C#\\Repocitorio\\ExerciseTRSF\\mvc_Migration\\mvc_Migration.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chent\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\chent\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
